@@ -52,3 +52,6 @@ jobs: #job to execute on event
         go mod init calc.go
         go mod tidy
         go test -v 
+        go test -v | go2xunit > report.xml #run test again and output as report.xml
+        ls #verify report is created
+        
