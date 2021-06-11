@@ -61,6 +61,24 @@ jobs: #job to execute on event
       with: 
         files: report.xml #uses a file created earlier
         
+    - if: ${{ success() }}
+      name: Export report.xml
+      run: mkdir upload
+      
+    - name: Prepare documents
+      run: mv report.xml ./upload #move file to upload folder
+      
+    - name: Prepare artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: assetDocuments
+        path: upload
+    
+    - name: Download Content
+      uses: actions/download-artifact@v2
+      with:
+        name: assetDocument
+      
     - if: ${{ failure() }}
       name: Create issues notifications
       uses: nashmaniac/create-issue-action@v1.1
