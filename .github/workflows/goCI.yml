@@ -40,7 +40,7 @@ jobs: #job to execute on event
         
     - name: Show hidden files
       run: |
-        cd virtualRepoFolder
+        cd virtualRepoFolder #access folder of interest in virutal env
         ls
-        cat myText.txt
+        cat myText.txt #show content of file
         cd ..
