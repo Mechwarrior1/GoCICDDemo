@@ -71,7 +71,7 @@ jobs: #job to execute on event
     - name: Prepare artifacts
       uses: actions/upload-artifact@v2
       with:
-        name: assetDocuments
+        name: assetDocument
         path: upload
     
     - name: Download Content
