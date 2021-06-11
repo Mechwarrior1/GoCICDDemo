@@ -49,4 +49,6 @@ jobs: #job to execute on event
       run: |
         go get github.com/franela/goblin #go packages
         go get github.com/tebeka/go2xunit
+        go mod init calc.go
+        go mod tidy
         go test -v 
