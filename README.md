@@ -1,1 +1,1 @@
-# GoCICDDemo
+# a Demo for Go CICD
