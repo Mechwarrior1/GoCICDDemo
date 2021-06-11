@@ -18,3 +18,5 @@ jobs: #job to execute on event
       with:
         # The Go version to download (if necessary) and use. Supports semver spec and ranges.
         go-version: 1.16.5 # optional
+    - name: show Go version
+      run: go version #verify Go is installed and show Go version
