@@ -27,6 +27,19 @@ func Divide(val1, val2 int) float64 {
 	return float64(val1) / float64(val2)
 }
 
+func Power(val1, val2 int) int {
+	if val2 == 0{
+		return 1
+	} else {
+		for i:=1; i< val2; i++{
+			val1 *= val1
+		}
+		return val1
+	}
+}
+
+
+
 func main(){
 	fmt.Println(Divide(1,1))
 }
