@@ -37,9 +37,9 @@ func TestCalc(t *testing.T) {
 		})
 		
 		gob.It("should get the power of numbers", func() {
-			gob.Assert(Divide(5, 0)).Equal(float64(1))
-			gob.Assert(Divide(5, 1)).Equal(float64(5))
-			gob.Assert(Divide(5, 2)).Equal(math.Inf(25))
+			gob.Assert(Divide(5, 0)).Equal(1)
+			gob.Assert(Divide(5, 1)).Equal(5)
+			gob.Assert(Divide(5, 2)).Equal(25)
 
 		})
 	})
